@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bike Rental</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Bikes</h1>
+      <p>Find &amp; rent your perfect ride</p>
+    </header>
+
+    <main>
+      <div id="status">
+        <div class="spinner"></div>
+        Loading bikes…
+      </div>
+      <div id="bikes-grid" style="display: none"></div>
+    </main>
+
+    <!-- Modal -->
+    <div
+      id="modal-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-model"
+    >
+      <div id="modal">
+        <button id="modal-close" aria-label="Close">✕</button>
+        <img id="modal-img" src="" alt="Bike image" />
+        <div id="modal-content">
+          <div id="modal-model"></div>
+          <div class="modal-specs">
+            <div class="spec">
+              <div class="spec-label">Manufacturer</div>
+              <div class="spec-value" id="spec-manuf"></div>
+            </div>
+            <div class="spec">
+              <div class="spec-label">Gears</div>
+              <div class="spec-value" id="spec-gear"></div>
+            </div>
+            <div class="spec">
+              <div class="spec-label">Gear Manufacturer</div>
+              <div class="spec-value" id="spec-gear-manuf"></div>
+            </div>
+            <div class="spec">
+              <div class="spec-label">Wheel Size</div>
+              <div class="spec-value" id="spec-size"></div>
+            </div>
+          </div>
+          <div id="modal-details"></div>
+          <button class="rent-btn">Rent This Bike</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

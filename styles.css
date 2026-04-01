@@ -1,0 +1,171 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #eee;
+}
+
+/* HEADER */
+header {
+  padding: 20px 30px;
+  border-bottom: 1px solid #333;
+}
+
+header h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  color: yellow;
+}
+
+header p {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+/* GRID */
+main {
+  padding: 20px 30px;
+}
+
+#bikes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+/* BIKE CARD */
+.bike-card {
+  background-color: #222;
+  border: 1px solid #333;
+  border-radius: 3px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.bike-card:hover {
+  transform: translateY(-3px);
+  border-color: yellow;
+}
+
+.bike-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background-color: #000;
+}
+
+.bike-card-body {
+  padding: 10px;
+}
+
+.bike-card-model {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  color: #fff;
+}
+
+.bike-card-manuf {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* LOADING / ERROR */
+#status {
+  text-align: center;
+  padding: 50px 0;
+  color: #aaa;
+}
+
+.spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #333;
+  border-top-color: yellow;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 0 auto 10px;
+}
+
+@keyframes spin { 
+  to { transform: rotate(360deg); }
+}
+
+/* MODAL */
+#modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-overlay.open {
+  display: flex;
+}
+
+#modal {
+  background: #222;
+  border: 1px solid #333;
+  width: 600px;
+  max-width: 90%;
+  padding: 20px;
+  position: relative;
+}
+
+#modal-close {
+  position: absolute;
+  top: 10px; right: 10px;
+  background: none;
+  border: 1px solid #333;
+  color: #aaa;
+  cursor: pointer;
+}
+
+#modal img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+#modal-model {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  color: yellow;
+  margin-bottom: 10px;
+}
+
+.spec {
+  margin-bottom: 8px;
+}
+
+.spec-label {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.spec-value {
+  font-size: 14px;
+  color: #fff;
+}
+
+.rent-btn {
+  background: yellow;
+  color: #000;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.rent-btn:hover {
+  background: #fff;
+}
